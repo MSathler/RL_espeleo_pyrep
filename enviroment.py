@@ -17,18 +17,20 @@ from collections import namedtuple, deque
 
 class ReacherEnv(object):
 
-    def __init__(self,SCENE_FILE, fixed_position = False):
+    def __init__(self,SCENE_FILE, fixed_position = False, use_graphic = True):
         """Initialize an Enviroment object.
         
         Params
         ======
+	    SCENE_FILE (string): Coppelia scene file
             fixed_position (bool): initial position of robot
+            use_graphic (bool): use CoppeliaSim graphical interface
 
         """
         self.
         self.first_time = True
         self.pr = PyRep()
-        self.pr.launch(SCENE_FILE, headless=True)
+        self.pr.launch(SCENE_FILE, headless= use_graphic)
         self.pr.start()
 
         #self.agent = P3dx()
@@ -174,6 +176,7 @@ class ReacherEnv(object):
         self.concentration_memory = deque(maxlen=self.memory_len)
         self.distance_memory = deque(maxlen=self.memory_len)
         self.angle_memory = deque(maxlen=self.memory_len)
+
         for _ in range(4):
             self.wind_angle_memory.append(0.0)
             self.concentration_memory.append(0.0)
