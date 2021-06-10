@@ -12,7 +12,8 @@ Follow the instructions in [Install CoppeliaSim + ROS Plugin](https://github.com
 ### PyRep
 
 PyRep is a toolkit for robot learning research, built on top of [CoppeliaSim](http://www.coppeliarobotics.com/)
-	Follow the instructions in [PyRep Install](https://github.com/stepjam/PyRep#install)
+
+Follow the instructions in [PyRep Install](https://github.com/stepjam/PyRep#install)
 	
 ---------------
 
